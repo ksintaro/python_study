@@ -60,5 +60,4 @@ def library_name(library_name):
     
     return redirect("/")
 
-if __name__ == "__main__":
-    app.run()
+app.run(port=8080, debug=True)
