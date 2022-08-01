@@ -31,7 +31,7 @@ def close_db(e=None):
     if db is not None:
         db.close()
 
-@app.route('/',methods=['GET'])
+@app.route('/')
 def index():
     return render_template('index.html',libraries=libraries)
 
