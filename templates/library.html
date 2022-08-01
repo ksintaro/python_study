@@ -1,0 +1,15 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}{{ library_name }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ library_name }}</h1>
+    {% for d in data %}
+    <div class="container">
+        <h3>{{ d.section }}</h3>
+        <p>{{ d.document }}</p>
+        <pre><code>{{ d.code }}</code></pre>
+        <samp>{{ d.output }}</samp>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

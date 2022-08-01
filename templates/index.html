@@ -1,0 +1,13 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}ライブラリ一覧{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>ライブラリ一覧
+    </h1>
+    <ul class="list-group">
+        {% for library in libraries %}
+        <li class="list-group-item"><a href="/{{ library }}">{{ library }}</a></li>
+        {% endfor%}
+    </ul>
+</div>
+{% endblock %}
