@@ -35,21 +35,22 @@
 --     (12,''),
 --     (13,'');
 
+delete from code;
 
--- INSERT INTO CODE 
---     VALUES(1,'import numpy as np'),
---     (2,'# ベクトルの定義\na = np.array([1, 2, 3])\n\na'),
---     (3,'a.shape'),
---     (4,'a.ndim'),
---     (5,'# 行列の定義\nb = np.array(\n\t[[1, 2, 3],\n\t[4, 5, 6],\n\t[7, 8, 9]]\n)\n\nb'),
---     (6,"print('Shape:', b.shape)\nprint('Rank:', b.ndim)"),
---     (7,'b.size'),
---     (8,'# 形を指定して、要素が全て 0 で埋められた ndarray を作る\na = np.zeros((3, 3))\n\na'),
---     (9,'# 形を指定して、要素が全て 1 で埋められた ndarray を作る\nb = np.ones((2, 3))\n\nb'),
---     (10,'# 形と値を指定して、要素が指定した値で埋められた ndarray を作る\nc = np.full((3, 2), 9)\n\nc'),
---     (11,'# 指定された大きさの単位行列を表す ndarray を作る\nd = np.eye(5)\n\nd'),
---     (12,'# 形を指定して、 0 ~ 1 の間の乱数で要素を埋めた ndarray を作る\ne = np.random.random((4, 5))\n\ne'),
---     (13,'# 3 から始まり 10 になるまで 1 ずつ増加する数列を作る（10 は含まない）\nf = np.arange(3, 10, 1)\n\nf');
+INSERT INTO CODE 
+    VALUES(1,'import numpy as np'),
+    (2,'# ベクトルの定義' + char(10) + 'a = np.array([1, 2, 3])' + char(10,10) + 'a'),
+    (3,'a.shape'),
+    (4,'a.ndim'),
+    (5,'# 行列の定義' + char(10) + 'b = np.array(' + char(10,9) + '[[1, 2, 3],' + char(10,9) + '[4, 5, 6],' + char(10,9) + '[7, 8, 9]]' + char(10,10) + ')b'),
+    (6,"print('Shape:', b.shape)" + char(10) + "print('Rank:', b.ndim)"),
+    (7,'b.size'),
+    (8,'# 形を指定して、要素が全て 0 で埋められた ndarray を作る' + char(10) + 'a = np.zeros((3, 3))' + char(10,10) + 'a'),
+    (9,'# 形を指定して、要素が全て 1 で埋められた ndarray を作る'+ char(10) + 'b = np.ones((2, 3))'+ char(10,10) + 'b'),
+    (10,'# 形と値を指定して、要素が指定した値で埋められた ndarray を作る' + char(10) +'c = np.full((3, 2), 9)' + char(10,10) + 'c'),
+    (11,'# 指定された大きさの単位行列を表す ndarray を作る' + char(10) + 'd = np.eye(5)' + char(10,10) +'d'),
+    (12,'# 形を指定して、 0 ~ 1 の間の乱数で要素を埋めた ndarray を作る' + char(10) +'e = np.random.random((4, 5))'+ char(10,10) +'e'),
+    (13,'# 3 から始まり 10 になるまで 1 ずつ増加する数列を作る（10 は含まない）' + char(10) + 'f = np.arange(3, 10, 1)' + char(10,10) + 'f');
 
 -- INSERT INTO OUTPUT 
 --     VALUES(1,''),
