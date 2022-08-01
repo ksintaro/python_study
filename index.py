@@ -43,7 +43,7 @@ def library_name(library_name):
             db = get_db()
 
             # SQL（データベースを操作するコマンド）を実行する
-            sql = f"select s.section,n.document,c.code,o.output from {library_name} as n join section as s on (s.id = n.section_id) join code as c on (c.section_id = n.section_id) join output as o on (o.section_id = n.section_id);"
+            sql = f"print s.section,n.document,c.code,o.output from {library_name} as n join section as s on (s.id = n.section_id) join code as c on (c.section_id = n.section_id) join output as o on (o.section_id = n.section_id);"
 
             # カーソルを取得する
             cur = db.execute(sql)
